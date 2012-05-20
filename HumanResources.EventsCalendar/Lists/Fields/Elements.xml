@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{7E26D503-5139-4B77-A2C6-F34BA1534D8B}" Type="MultiChoice" DisplayName="Target audience" Required="TRUE" FillInChoice="FALSE" Name="TargetAudience" Group="HumanResources">
+    <CHOICES>
+      <CHOICE>Developers</CHOICE>
+      <CHOICE>QA</CHOICE>
+      <CHOICE>HR</CHOICE>
+      <CHOICE>System Administrators</CHOICE>
+      <CHOICE>Other</CHOICE>
+    </CHOICES>
+  </Field>
+  <Field ID="{D694D082-AAD9-46DE-B6B8-3CB1AABB349C}" Type="URL" DisplayName="Link" Required="FALSE" Format="Hyperlink" Name="Link" Group="HumanResources" />  
+</Elements>

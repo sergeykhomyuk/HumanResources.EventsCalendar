@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.EventsCalendar", "HumanResources.EventsCalendar\HumanResources.EventsCalendar.csproj", "{D5767952-2E20-4A40-8353-1E945D028730}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3B1428C-BEAA-4AA1-8407-37963CABD9D8} = {F3B1428C-BEAA-4AA1-8407-37963CABD9D8}
+		{B95B7DCD-EBBE-4F5B-8DF3-254EA7650679} = {B95B7DCD-EBBE-4F5B-8DF3-254EA7650679}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.SharePoint", "Framework.SharePoint\Framework.SharePoint.csproj", "{F3B1428C-BEAA-4AA1-8407-37963CABD9D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.EventsCalendar.Services", "HumanResources.EventsCalendar.Services\HumanResources.EventsCalendar.Services.csproj", "{B95B7DCD-EBBE-4F5B-8DF3-254EA7650679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{78BFACA0-5E16-4586-911A-AFF84C6FFF6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSandbox", "TestSandbox\TestSandbox.csproj", "{2D0DDDEC-709A-4FB2-AF03-D895914C434F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResources.EventsCalendar.Subscription", "HumanResources.EventsCalendar.Subscription\HumanResources.EventsCalendar.Subscription.csproj", "{AB759A99-9DA0-4B39-949E-9A1019A160D8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3B1428C-BEAA-4AA1-8407-37963CABD9D8} = {F3B1428C-BEAA-4AA1-8407-37963CABD9D8}
+		{78BFACA0-5E16-4586-911A-AFF84C6FFF6F} = {78BFACA0-5E16-4586-911A-AFF84C6FFF6F}
+		{B95B7DCD-EBBE-4F5B-8DF3-254EA7650679} = {B95B7DCD-EBBE-4F5B-8DF3-254EA7650679}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5767952-2E20-4A40-8353-1E945D028730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5767952-2E20-4A40-8353-1E945D028730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5767952-2E20-4A40-8353-1E945D028730}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D5767952-2E20-4A40-8353-1E945D028730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5767952-2E20-4A40-8353-1E945D028730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5767952-2E20-4A40-8353-1E945D028730}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F3B1428C-BEAA-4AA1-8407-37963CABD9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B1428C-BEAA-4AA1-8407-37963CABD9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B1428C-BEAA-4AA1-8407-37963CABD9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B1428C-BEAA-4AA1-8407-37963CABD9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95B7DCD-EBBE-4F5B-8DF3-254EA7650679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95B7DCD-EBBE-4F5B-8DF3-254EA7650679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95B7DCD-EBBE-4F5B-8DF3-254EA7650679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95B7DCD-EBBE-4F5B-8DF3-254EA7650679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BFACA0-5E16-4586-911A-AFF84C6FFF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BFACA0-5E16-4586-911A-AFF84C6FFF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BFACA0-5E16-4586-911A-AFF84C6FFF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BFACA0-5E16-4586-911A-AFF84C6FFF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D0DDDEC-709A-4FB2-AF03-D895914C434F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D0DDDEC-709A-4FB2-AF03-D895914C434F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D0DDDEC-709A-4FB2-AF03-D895914C434F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2D0DDDEC-709A-4FB2-AF03-D895914C434F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D0DDDEC-709A-4FB2-AF03-D895914C434F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D0DDDEC-709A-4FB2-AF03-D895914C434F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AB759A99-9DA0-4B39-949E-9A1019A160D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB759A99-9DA0-4B39-949E-9A1019A160D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB759A99-9DA0-4B39-949E-9A1019A160D8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AB759A99-9DA0-4B39-949E-9A1019A160D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB759A99-9DA0-4B39-949E-9A1019A160D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB759A99-9DA0-4B39-949E-9A1019A160D8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

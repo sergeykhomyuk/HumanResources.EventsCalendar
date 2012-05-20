@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{43071409-BB94-4E9D-807D-5181C75A1E58}" Type="Text" DisplayName="Email" Required="TRUE" Name="Email"  Group="HumanResources" />
+  <Field ID="{2F0B511F-0002-499B-8840-130F4B0EF77A}" Name="NotifyOfNewEvents" DisplayName="Notify of new events" Type="Boolean" Required="FALSE" Group="HumanResources"/>
+</Elements>

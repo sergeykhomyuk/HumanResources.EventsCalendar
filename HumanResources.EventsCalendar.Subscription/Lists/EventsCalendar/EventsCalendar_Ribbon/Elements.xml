@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="ManageSubscription" Location="CommandUI.Ribbon.ListView" RegistrationType="ContentType" RegistrationId="0x010200232BEE803FE84D14A2E033AF9462D5DF"
+                Title="Manage subscription">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Calendar.Events.Actions.Controls._children">
+          <Button Id="Ribbon.Calendar.Events.Actions.ClearCalendar"
+                  Command="ManageSubscription"
+                  Description="Manage Events Subscription."
+                  LabelText="Manage Subscription"
+                  Image16by16="/_layouts/$Resources:core,Language;/images/formatmap16x16.png" Image16by16Top="-160" Image16by16Left="-176"
+                  Image32by32="/_layouts/$Resources:core,Language;/images/formatmap32x32.png" Image32by32Top="-288" Image32by32Left="-224"
+                  TemplateAlias="o2"
+                  Sequence="60"/>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler Command="ManageSubscription" CommandAction="javascript:ManageEventsSubscription();" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+  <CustomAction Id="Bpcs2.Ribbon.Library.Actions.ClearCalendarCommand"
+    Location="ScriptLink"
+    ScriptBlock="     
+     ExecuteOrDelayUntilScriptLoaded(getWebProperties, 'sp.js');
+
+     var relativeUrl;
+
+     function getWebProperties() {
+         var ctx = new SP.ClientContext.get_current();
+         this.web = ctx.get_web();
+         ctx.load(this.web, 'Title', 'Id', 'Created', 'ServerRelativeUrl');
+         ctx.executeQueryAsync(Function.createDelegate(this, this.onSuccess), Function.createDelegate(this, this.onFail));
+     }
+
+     function onSuccess(sender, args) {
+         relativeUrl = this.web.get_serverRelativeUrl();
+     }
+
+     function onFail(sender, args) {
+         alert('failed to get list. Error:' + args.get_message());
+     }    
+     
+     function ManageEventsSubscription() {                           
+
+       var url = '/_layouts/HumanResources.EventsCalendar/Subscribe.aspx';
+        if (relativeUrl.length > 1)
+          url = relativeUrl + url;
+        
+       var options = {
+           url: url,
+           title: 'Manage Events Subscription',
+           allowMaximize: false,
+           showClose: true,
+           width: 600,
+           dialogReturnValueCallback: onDialogClose
+       };
+    
+       SP.UI.ModalDialog.showModalDialog(options);          
+    }                          
+    
+    function onDialogClose(dialogResult, returnValue) {
+    }           
+      "/>
+</Elements>

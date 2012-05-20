@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9d296034-5fde-42d2-b744-be0f3d1e6356" solutionId="9d296034-5fde-42d2-b744-be0f3d1e6356" resetWebServer="false" name="HumanResources.EventsCalendar.Subscription" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Camlex.NET.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\Camlex.NET.dll.3.1.0.0\lib\net20\Camlex.NET.dll" />
+    <projectOutputAssembly location="Framework.SharePoint.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\Framework.SharePoint\Framework.SharePoint.csproj" />
+    <projectOutputAssembly location="HumanResources.EventsCalendar.Services.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\HumanResources.EventsCalendar.Services\HumanResources.EventsCalendar.Services.csproj" />
+    <projectOutputAssembly location="Framework.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\Framework\Framework.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="77a44c18-f180-4fec-96a9-38f624763fe9" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="7945f456-82a5-41ce-a75e-cae67c20c042" />
+  </projectItems>
+</package>

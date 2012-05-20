@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5b1832e3-4cf0-47e0-8b85-291780b08a6d" solutionId="5b1832e3-4cf0-47e0-8b85-291780b08a6d" resetWebServer="false" name="HumanResources.EventsCalendar" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="012e0903-bf03-4e48-a4e6-88da743cc533" />
+  </features>
+</package>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Event (0x0102) -->
+  <ContentType ID="0x010200232bee803fe84d14a2e033af9462d5df"
+               Name="Calendar Event"
+               Group="HumanResources"
+               Description="Calendar Event Content Type"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{7E26D503-5139-4B77-A2C6-F34BA1534D8B}" Name="TargetAudience" Required="TRUE" />
+      <FieldRef ID="{D694D082-AAD9-46DE-B6B8-3CB1AABB349C}" Name="Link" Required="FALSE" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

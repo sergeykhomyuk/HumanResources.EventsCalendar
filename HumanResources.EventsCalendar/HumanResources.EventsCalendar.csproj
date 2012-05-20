@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5767952-2E20-4A40-8353-1E945D028730}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HumanResources.EventsCalendar</RootNamespace>
+    <AssemblyName>HumanResources.EventsCalendar</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\Feature\Feature.EventReceiver.cs">
+      <DependentUpon>Feature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\Feature\Feature.feature">
+      <FeatureId>{012e0903-bf03-4e48-a4e6-88da743cc533}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Lists\EventsCalendar\EventsCalendar_ContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{806e7f6e-d3d4-46b7-8a1f-fb270872aee0}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\EventsCalendar\EventsCalendar_ListDefinition\EventsCalendar_ListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{111b8b63-03b3-4ebb-b24a-7d0be9b851cb}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\EventsCalendar\EventsCalendar_ListDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0b263eee-884d-445b-87d6-7377c9f24335}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Fields\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{84c99c8a-d055-43e1-9b9c-59bcfd37de46}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{5b1832e3-4cf0-47e0-8b85-291780b08a6d}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Feature\Feature.Template.xml">
+      <DependentUpon>Feature.feature</DependentUpon>
+    </Content>
+    <Content Include="Lists\EventsCalendar\EventsCalendar_ContentType\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lists\EventsCalendar\EventsCalendar_ListDefinition\Elements.xml" />
+    <Content Include="Lists\EventsCalendar\EventsCalendar_ListDefinition\EventsCalendar_ListInstance\Elements.xml" />
+    <Content Include="Lists\EventsCalendar\EventsCalendar_ListDefinition\Schema.xml" />
+    <Content Include="Lists\Fields\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100db16936d754a466a873ab16baa9f8ce2"
+               Name="Events Calendar Subscriber"
+               Group="HumanResources"
+               Description="Events Calendar Subscriber Content Type"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{7E26D503-5139-4B77-A2C6-F34BA1534D8B}" Name="TargetAudience" Required="TRUE" />
+      <FieldRef ID="{43071409-BB94-4E9D-807D-5181C75A1E58}" Name="Email" Required="TRUE" />
+      <FieldRef ID="{2F0B511F-0002-499B-8840-130F4B0EF77A}" Name="NotifyOfNewEvents" Required="FALSE" />
+    </FieldRefs>
+  </ContentType>
+</Elements>
